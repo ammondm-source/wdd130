@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Grid Flags</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      background: #f4f4f4;
+    }
+
+    .flag {
+      width: 300px;
+      height: 200px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    /* ---------- Chile (given example) ---------- */
+    #chile {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    #cblue  { background: #0039a6; }
+    #cwhite { background: white; grid-column: 2 / 3; }
+    #cred   { background: #d52b1e; grid-column: 1 / 3; }
+
+    /* ---------- Denmark ---------- */
+    #denmark {
+      display: grid;
+      grid-template-columns: 3fr 1fr 6fr;
+      grid-template-rows: 3fr 1fr 3fr;
+      background: white;
+    }
+
+    #dred1 { background: #c8102e; grid-column: 1; grid-row: 1; }
+    #dred2 { background: #c8102e; grid-column: 3; grid-row: 1; }
+    #dred3 { background: #c8102e; grid-column: 1; grid-row: 3; }
+    #dred4 { background: #c8102e; grid-column: 3; grid-row: 3; }
+
+    /* ---------- Finland ---------- */
+    #finland {
+      display: grid;
+      grid-template-columns: 3fr 1fr 6fr;
+      grid-template-rows: 2fr 1fr 2fr;
+      background: #003580;
+    }
+
+    #fwhite1 { background: white; grid-column: 1; grid-row: 1; }
+    #fwhite2 { background: white; grid-column: 3; grid-row: 1; }
+    #fwhite3 { background: white; grid-column: 1; grid-row: 3; }
+    #fwhite4 { background: white; grid-column: 3; grid-row: 3; }
+
+    /* ---------- Benin ---------- */
+    #benin {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    #bgreen  { background: #008751; grid-column: 1; grid-row: 1 / 3; }
+    #byellow { background: #fcd116; grid-column: 2; grid-row: 1; }
+    #bred    { background: #e8112d; grid-column: 2; grid-row: 2; }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Chile -->
+  <div id="chile" class="flag">
+    <div id="cblue"></div>
+    <div id="cwhite"></div>
+    <div id="cred"></div>
+  </div>
+
+  <!-- Denmark -->
+  <div id="denmark" class="flag">
+    <div id="dred1"></div>
+    <div id="dred2"></div>
+    <div id="dred3"></div>
+    <div id="dred4"></div>
+  </div>
+
+  <!-- Finland -->
+  <div id="finland" class="flag">
+    <div id="fwhite1"></div>
+    <div id="fwhite2"></div>
+    <div id="fwhite3"></div>
+    <div id="fwhite4"></div>
+  </div>
+
+  <!-- Benin -->
+  <div id="benin" class="flag">
+    <div id="bgreen"></div>
+    <div id="byellow"></div>
+    <div id="bred"></div>
+  </div>
+
+</body>
+</html>
