@@ -2,111 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ammon | WDD130 Portal</title>
-
-  <!-- CSS (you'll really style this in Progress Check 300) -->
-  <link rel="stylesheet" href="styles/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ammon WDD130 Portal</title>
+  <link rel="stylesheet" href="styles/style.css"/>
 </head>
+
 <body>
 
-  <header>
-    <img src="images/logo.png" alt="Ammon WDD130 logo" width="80">
+<header>
+  <div class="container brand">
+    <img src="images/logo.png" alt="Ammon logo">
     <h1>Ammon’s WDD130 Portal</h1>
     <p>Welcome! This page links to my projects and class work.</p>
-  </header>
+  </div>
+</header>
 
-  <nav>
+<nav>
+  <div class="container nav-inner">
     <a href="index.html">Home</a>
     <a href="wwr/index.html">WWR</a>
     <a href="ice.html">ICE</a>
     <a href="aboutme.html">About Me</a>
-  </nav>
+  </div>
+</nav>
 
-  <main>
-    <section>
+<main>
+  <div class="container grid two">
+
+    <section class="card">
       <h2>My Projects</h2>
       <p>Here are the main projects I’m building in this course.</p>
-
-      <!-- UL requirement -->
-      <ul>
+      <ul class="list">
         <li><a href="wwr/index.html">White Water Rafting Website</a></li>
         <li><a href="ice.html">ICE Challenges</a></li>
         <li><a href="aboutme.html">About Me Page</a></li>
       </ul>
     </section>
 
-    <section>
+    <section class="card">
       <h2>Course Progress</h2>
       <p>This table helps me track what I’ve finished and what’s next.</p>
 
-      <!-- TABLE requirement (+ helper elements) -->
-      <table>
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Status</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Portal Page (Plan)</td>
-            <td>Done</td>
-            <td><a href="index.html">View</a></td>
-          </tr>
-          <tr>
-            <td>WWR Site</td>
-            <td>In Progress</td>
-            <td><a href="wwr/index.html">Open</a></td>
-          </tr>
-          <tr>
-            <td>ICE Challenges</td>
-            <td>Starting Soon</td>
-            <td><a href="ice.html">Open</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Status</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Portal Page</td>
+              <td>Done</td>
+              <td><a href="index.html">View</a></td>
+            </tr>
+            <tr>
+              <td>WWR Site</td>
+              <td>In Progress</td>
+              <td><a href="wwr/index.html">Open</a></td>
+            </tr>
+            <tr>
+              <td>ICE Challenges</td>
+              <td>Starting</td>
+              <td><a href="ice.html">Open</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <section>
+    <section class="card">
       <h2>Contact Me</h2>
       <p>If you want to reach me, send a message here.</p>
 
-      <!-- FORM requirement (+ helper elements) -->
       <form>
-        <div>
-          <label for="name">Name:</label>
-          <input id="name" name="name" type="text" required>
-        </div>
+        <label>Name</label>
+        <input type="text" placeholder="Your name">
 
-        <div>
-          <label for="email">Email:</label>
-          <input id="email" name="email" type="email" required>
-        </div>
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com">
 
-        <div>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-        </div>
+        <label>Message</label>
+        <textarea placeholder="Write your message..."></textarea>
 
         <button type="submit">Send</button>
       </form>
     </section>
 
-    <section>
-      <h3>Featured Image</h3>
-      <p>This is a placeholder image I’ll replace later.</p>
+  </div>
+</main>
 
-      <!-- IMG requirement -->
-      <img src="images/placeholder.jpg" alt="A placeholder image" width="400">
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Ammon Murchison | WDD130</p>
-  </footer>
+<footer>
+  <p>&copy; 2026 Ammon Murchison | WDD130</p>
+</footer>
 
 </body>
 </html>

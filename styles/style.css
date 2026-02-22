@@ -1,0 +1,222 @@
+:root {
+  --ink: #001414;
+  --teal: #197278;
+  --paper: #EDDDD4;
+  --orange: #E73623;
+  --espresso: #561A10;
+
+  --max: 1000px;
+  --radius: 18px;
+  --shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: radial-gradient(900px 500px at 20% 10%, rgba(25,114,120,.22), transparent 55%),
+              radial-gradient(900px 500px at 80% 0%, rgba(231,54,35,.14), transparent 60%),
+              var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a { color: inherit; }
+
+.container {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+header {
+  padding: 48px 0 32px;
+  background:
+    linear-gradient(135deg, rgba(0,20,20,.55), rgba(25,114,120,.92)),
+    radial-gradient(800px 400px at 10% 30%, rgba(237,221,212,.18), transparent 60%);
+  color: var(--paper);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.brand {
+  display: grid;
+  place-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.brand img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  background: rgba(237,221,212,.12);
+  border: 1px solid rgba(237,221,212,.25);
+  padding: 12px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.18);
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing: .2px;
+}
+
+.brand p {
+  margin: 0;
+  opacity: .9;
+  font-weight: 500;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(0,20,20,.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(237,221,212,.12);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--paper);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  transition: transform .12s ease, background .12s ease, opacity .12s ease;
+  opacity: .92;
+}
+
+nav a:hover {
+  background: rgba(237,221,212,.16);
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+main {
+  padding: 28px 0 48px;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.card {
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+}
+
+.card p {
+  margin: 0 0 14px;
+  color: rgba(0,20,20,.82);
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.list a {
+  color: var(--espresso);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,.85);
+}
+
+th, td {
+  padding: 12px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+th {
+  background: rgba(25,114,120,.10);
+  color: var(--ink);
+  font-weight: 800;
+}
+
+tr:hover td {
+  background: rgba(231,54,35,.06);
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  max-width: 520px;
+}
+
+label {
+  font-weight: 800;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.18);
+  background: rgba(255,255,255,.9);
+  font: inherit;
+}
+
+textarea { min-height: 120px; resize: vertical; }
+
+button {
+  justify-self: start;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 999px;
+  font-weight: 900;
+  color: var(--paper);
+  background: linear-gradient(135deg, var(--orange), var(--espresso));
+  box-shadow: 0 10px 22px rgba(231,54,35,.22);
+  cursor: pointer;
+  transition: transform .12s ease, filter .12s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+footer {
+  padding: 28px 0;
+  text-align: center;
+  color: rgba(0,20,20,.75);
+}
+
+@media (min-width: 860px) {
+  .grid.two {
+    grid-template-columns: 1.2fr .8fr;
+    align-items: start;
+  }
+}
