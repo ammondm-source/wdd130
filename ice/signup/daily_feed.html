@@ -17,7 +17,6 @@
       color: #111;
     }
 
-    /* Phone/card */
     #formContainer{
       width: min(440px, 92vw);
       border: 10px solid #0b3c91;
@@ -28,7 +27,6 @@
       position: relative;
     }
 
-    /* Close button */
     #closeBtn{
       position: absolute;
       top: 10px;
@@ -46,7 +44,6 @@
     }
     #closeBtn:hover{ filter: brightness(.96); }
 
-    /* Hero */
     .hero{
       position: relative;
       height: 170px;
@@ -78,7 +75,6 @@
       font-weight: 700;
     }
 
-    /* Form panel */
     .panel{
       background: #fff;
       padding: 18px 26px 12px;
@@ -116,7 +112,6 @@
       font-size: 16px;
     }
 
-    /* gender row right side */
     .gender{
       display: flex;
       align-items: center;
@@ -127,7 +122,6 @@
     .gender label{ text-align: left; white-space: normal; }
     .gender input{ transform: translateY(1px); }
 
-    /* checkbox rows centered across both columns */
     .full{
       grid-column: 1 / -1;
       display: flex;
@@ -139,7 +133,6 @@
     }
     .full input{ transform: translateY(1px); }
 
-    /* submit centered */
     .actions{
       grid-column: 1 / -1;
       display: flex;
@@ -156,7 +149,6 @@
       cursor: pointer;
     }
 
-    /* Books strip */
     .books{
       height: 95px;
       background: #0c0c0c;
@@ -173,7 +165,6 @@
       border-left: 2px solid #eee;
     }
 
-    /* output block (not part of mock, keep simple) */
     #output{
       width: min(760px, 92vw);
       margin-top: 18px;
@@ -255,7 +246,6 @@
   <div id="output"></div>
 
   <script>
-    // Here is some Javascript to start looking forward to wdd131
     document.getElementById("closeBtn").addEventListener("click", function () {
       document.getElementById("formContainer").style.display = "none";
     });
@@ -264,7 +254,7 @@
     const output = document.getElementById('output');
 
     form.addEventListener('submit', function (event) {
-      event.preventDefault(); // Stop form from actually submitting
+      event.preventDefault();
 
       const formData = new FormData(form);
       const entries = [];
